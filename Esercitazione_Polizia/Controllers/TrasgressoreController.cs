@@ -91,7 +91,7 @@ namespace Esercitazione_Polizia.Controllers
                 conn.Close();
             }
 
-            return View();
+            return RedirectToAction("Index", "Trasgressore");
         }
         
 
