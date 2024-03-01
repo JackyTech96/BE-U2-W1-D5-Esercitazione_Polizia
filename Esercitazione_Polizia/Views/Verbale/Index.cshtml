@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Esercitazione_Polizia.Models.Verbale>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Elenco Verbali</h2>
+
+<p>
+    @Html.ActionLink("Aggiungi Verbale", "Create", null, new {@class="btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDVerbale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDTrasgressore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nominativo_Agente)
+        </th>
+   
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDVerbale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDTrasgressore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataViolazione)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nominativo_Agente)
+        </td>
+    </tr>
+}
+
+</table>

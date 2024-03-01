@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Esercitazione_Polizia.Models.Violazione>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <div class="jumbotron">
+        <h1 class="display-4 mb-3">Benvenuto nell'Archivio della Polizia Municipale</h1>
+        <p class="lead mb-5">
+            Esplora le funzionalità del nostro sistema per gestire in modo efficiente le informazioni relative ai trasgressori e ai verbali emessi dalla Polizia Municipale. Visualizza l'elenco completo dei trasgressori, compila nuovi verbali e monitora le violazioni in dettaglio.
+        </p>
+    </div>
+</div>
+
+<div class="row row-cols-3">
+    <div class="col">
+        <div class="card text-center">
+            <div class="card-body">
+                <h2 class="card-title">Trasgressori</h2>
+                <p class="card-text">Visualizza e gestisci i trasgressori.</p>
+                @Html.ActionLink("Visualizza Trasgressori", "Index", "Trasgressore", null, new { @class = "btn btn-dark btn-rounded" })
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-center">
+            <div class="card-body">
+                <h2 class="card-title">Verbali</h2>
+                <p class="card-text">Compila i verbali delle violazioni.</p>
+                @Html.ActionLink("Compila Verbale", "Create", "Verbale",null, new { @class = "btn btn-dark btn-rounded" })
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-center">
+            <div class="card-body">
+                <h2 class="card-title">Violazioni</h2>
+                <p class="card-text">Visualizza informazioni dettagliate sulle violazioni.</p>
+                @Html.ActionLink("Visualizza Elenco Violazioni", "Index", "Violazione",null, new { @class = "btn btn-dark btn-rounded" })
+            </div>
+        </div>
+    </div>
+</div>

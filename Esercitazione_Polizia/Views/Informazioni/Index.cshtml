@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h2 class="mb-0">Altre Sezioni</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            @Html.ActionLink("Verbali per Trasgressore", "VerbaliPerTrasgressore", null, new { @class = "btn btn-outline-primary btn-block" })
+                        </li>
+                        <li class="list-group-item">
+                            @Html.ActionLink("Punti Decurtati", "PuntiDecurtatiPerTrasgressore", null, new { @class = "btn btn-outline-success btn-block" })
+                        </li>
+                        <li class="list-group-item">
+                            @Html.ActionLink("Violazioni Costose", "ViolazioniImportoMaggioreDi400", null, new { @class = "btn btn-outline-danger btn-block" })
+                        </li>
+                        <li class="list-group-item">
+                            @Html.ActionLink("Violazioni Oltre 10 Punti", "ViolazioniOltre10Punti", null, new { @class = "btn btn-outline-warning btn-block" })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Esercitazione_Polizia.Models.Violazione>
+
+@{
+    ViewBag.Title = "Violazioni con Importo Maggiore di 400 Euro";
+}
+
+<h2>Violazioni con Importo Maggiore di 400 Euro</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDViolazione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PuntiDecurtati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contestabile)
+        </th>
+        
+    </tr>
+
+    @foreach (var violazione in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => violazione.IDViolazione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => violazione.Descrizione)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => violazione.PuntiDecurtati)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => violazione.Importo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => violazione.Contestabile)
+            </td>
+        </tr>
+    }
+</table>

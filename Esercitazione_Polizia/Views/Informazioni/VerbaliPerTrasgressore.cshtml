@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Esercitazione_Polizia.Models.Verbale>
+
+@{
+    ViewBag.Title = "VerbaliPerTrasgressore";
+}
+
+<h2>Verbali Per Trasgressore</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDTrasgressore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotaleVerbali)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDTrasgressore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotaleVerbali)
+            </td>
+          
+        </tr>
+    }
+
+</table>
